@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-YCNetworkDemo/Pods-YCNetworkDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/YCNetwork/YCNetwork.framework
+${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework

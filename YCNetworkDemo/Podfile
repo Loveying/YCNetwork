@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+
+target 'YCNetworkDemo' do
+  use_frameworks!
+  pod 'YCNetwork', :path => '../'
+
+end
