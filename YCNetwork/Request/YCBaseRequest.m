@@ -136,7 +136,10 @@ pthread_mutex_unlock(&self->_lock);
 #pragma mark - request
 
 - (void)startWithCacheKey:(NSString *)cacheKey {
+    __weak typeof(self) weakSelf = self;
     BOOL(^cancelled)(NSNumber *) = ^BOOL(NSNumber *taskID){
+        __strong typeof(weakSelf) self = weakSelf;
+        if (!self) return YES;
         YCN_IDECORD_LOCK(BOOL contains = [self.taskIDRecord containsObject:taskID];)
         return !contains;
     };
@@ -230,12 +233,6 @@ pthread_mutex_unlock(&self->_lock);
 
 - (void)successWithResponse:(YCNetworkResponse *)response cacheKey:(NSString *)cacheKey fromCache:(BOOL)fromCache taskID:(NSNumber *)taskID {
     
-    BOOL shouldCache = !self.cacheHandler.shouldCacheBlock || self.cacheHandler.shouldCacheBlock(response);
-    BOOL isSendFile = self.requestConstructingBody || self.downloadPath.length > 0;
-    if (!fromCache && !isSendFile && shouldCache) {
-        [self.cacheHandler setObject:response.responseObject forKey:cacheKey];
-    }
-    
     if ([self respondsToSelector:@selector(yc_preprocessSuccessInChildThreadWithResponse:)]) {
         [self yc_preprocessSuccessInChildThreadWithResponse:response];
     }
@@ -260,6 +257,12 @@ pthread_mutex_unlock(&self->_lock);
                 self.successBlock(response);
             }
             [self clearRequestBlocks];
+            // 在网络响应数据被业务处理完成后进行缓存，可避免将异常数据写入缓存（比如数据导致 Crash 的情况）
+            BOOL shouldCache = !self.cacheHandler.shouldCacheBlock || self.cacheHandler.shouldCacheBlock(response);
+            BOOL isSendFile = self.requestConstructingBody || self.downloadPath.length > 0;
+            if (!isSendFile && shouldCache) {
+                [self.cacheHandler setObject:response.responseObject forKey:cacheKey];
+            }
         }
         
         if (taskID) [self.taskIDRecord removeObject:taskID];
@@ -338,6 +341,14 @@ pthread_mutex_unlock(&self->_lock);
     id parameter = self.requestParameter;
     if ([self respondsToSelector:@selector(yc_preprocessParameter:)]) {
         parameter = [self yc_preprocessParameter:parameter];
+    }
+    return parameter;
+}
+
+- (id)validRequestHeaderParameter {
+    id parameter = self.requestHeaderParameter;
+    if ([self respondsToSelector:@selector(yc_preprocessHeaderParameter:)]) {
+        parameter = [self yc_preprocessHeaderParameter:parameter];
     }
     return parameter;
 }

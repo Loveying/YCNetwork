@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YCNetwork"
-  spec.version      = "1.0.0"
+  spec.version      = "1.1.0"
   spec.summary      = "基于AFN封装的网路请求，注重性能，设计简洁，易于拓展"
 
   # This description is used to generate tags and improve search results.

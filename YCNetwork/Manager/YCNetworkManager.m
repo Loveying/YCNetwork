@@ -141,7 +141,7 @@ pthread_mutex_unlock(&self->_lock);
     AFHTTPRequestSerializer *serializer = [self requestSerializerForRequest:request];
     NSString *URLString = [request validRequestURLString];
     id parameter = [request validRequestParameter];
-    
+    id headerParameter = [request validRequestHeaderParameter];
     // 构建 URLRequest
     NSError *error = nil;
     NSMutableURLRequest *URLRequest = nil;
@@ -150,7 +150,11 @@ pthread_mutex_unlock(&self->_lock);
     } else {
         URLRequest = [serializer requestWithMethod:method URLString:URLString parameters:parameter error:&error];
     }
-    
+    if (headerParameter) {
+        [headerParameter enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
+            [URLRequest addValue:obj forHTTPHeaderField:key];
+        }];
+    }
     if (error) {
         if (completion) completion([YCNetworkResponse responseWithSessionTask:nil responseObject:nil error:error]);
         return nil;

@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - YCNetwork (1.0.0):
+  - YCNetwork (1.1.0):
     - AFNetworking
     - YYCache
   - YYCache (1.0.4)
@@ -33,9 +33,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  YCNetwork: 3eb25d9769d93a0aaf5322bad031398b5ab3dc64
+  YCNetwork: 2e9419e1bac2397ba2259b44cd59d8ec591f7ca9
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
 PODFILE CHECKSUM: b9bf368b591aec6bf41d4eddce8128c84e03dafb
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.8.4

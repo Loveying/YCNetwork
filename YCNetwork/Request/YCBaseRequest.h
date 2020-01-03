@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 请求参数 */
 @property (nonatomic, copy, nullable) NSDictionary *requestParameter;
 
+/** 请求头参数 */
+@property (nonatomic, copy, nullable) NSDictionary *requestHeaderParameter;
+
 /** 请求超时时间 */
 @property (nonatomic, assign) NSTimeInterval requestTimeoutInterval;
 
@@ -105,6 +108,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 预处理请求数据 (重写分类方法)
 @interface YCBaseRequest (PreprocessRequest)
+
+/** 预处理请求头参数, 返回处理后的请求头参数 */
+- (nullable NSDictionary *)yc_preprocessHeaderParameter:(nullable NSDictionary *)parameter;
 
 /** 预处理请求参数, 返回处理后的请求参数 */
 - (nullable NSDictionary *)yc_preprocessParameter:(nullable NSDictionary *)parameter;

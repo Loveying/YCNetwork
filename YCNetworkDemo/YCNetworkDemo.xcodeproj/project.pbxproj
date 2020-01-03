@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D7BB4C23BECEAD00BA68C7 /* YCNetworkResponse+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7BB4B23BECEAD00BA68C7 /* YCNetworkResponse+Custom.m */; };
+		42D7BB4F23BED1D800BA68C7 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7BB4E23BED1D800BA68C7 /* TestViewController.m */; };
+		42D7BB5223BEE85900BA68C7 /* TestServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7BB5123BEE85900BA68C7 /* TestServerRequest.m */; };
 		748BF0CE2340D5A500956DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF0CD2340D5A500956DEF /* AppDelegate.m */; };
 		748BF0D42340D5A500956DEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF0D32340D5A500956DEF /* ViewController.m */; };
 		748BF0D72340D5A500956DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748BF0D52340D5A500956DEF /* Main.storyboard */; };
@@ -16,7 +19,6 @@
 		748BF0E92340D5A600956DEF /* YCNetworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF0E82340D5A600956DEF /* YCNetworkDemoTests.m */; };
 		748BF0F42340D5A600956DEF /* YCNetworkDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF0F32340D5A600956DEF /* YCNetworkDemoUITests.m */; };
 		748BF11C2340DAE400956DEF /* YCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF11B2340DAE400956DEF /* YCLogger.m */; };
-		748BF1202340DB4500956DEF /* DefaultServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF11F2340DB4500956DEF /* DefaultServerRequest.m */; };
 		748BF1232340DB9C00956DEF /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF1222340DB9C00956DEF /* Api.m */; };
 		748BF1262340DBF200956DEF /* OtherServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BF1252340DBF200956DEF /* OtherServerRequest.m */; };
 		899AC90F89703455EB65AF07 /* Pods_YCNetworkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA68392E7F4D143F0476A78F /* Pods_YCNetworkDemo.framework */; };
@@ -40,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42D7BB4A23BECEAD00BA68C7 /* YCNetworkResponse+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YCNetworkResponse+Custom.h"; sourceTree = "<group>"; };
+		42D7BB4B23BECEAD00BA68C7 /* YCNetworkResponse+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YCNetworkResponse+Custom.m"; sourceTree = "<group>"; };
+		42D7BB4D23BED1D800BA68C7 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		42D7BB4E23BED1D800BA68C7 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		42D7BB5023BEE85900BA68C7 /* TestServerRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestServerRequest.h; sourceTree = "<group>"; };
+		42D7BB5123BEE85900BA68C7 /* TestServerRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestServerRequest.m; sourceTree = "<group>"; };
 		702B56E9B51C6C98247420CB /* Pods-YCNetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCNetworkDemo.release.xcconfig"; path = "Target Support Files/Pods-YCNetworkDemo/Pods-YCNetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
 		748BF0C92340D5A500956DEF /* YCNetworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCNetworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748BF0CC2340D5A500956DEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,8 +67,6 @@
 		748BF0F52340D5A600956DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748BF11A2340DAE400956DEF /* YCLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCLogger.h; sourceTree = "<group>"; };
 		748BF11B2340DAE400956DEF /* YCLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCLogger.m; sourceTree = "<group>"; };
-		748BF11E2340DB4500956DEF /* DefaultServerRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultServerRequest.h; sourceTree = "<group>"; };
-		748BF11F2340DB4500956DEF /* DefaultServerRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultServerRequest.m; sourceTree = "<group>"; };
 		748BF1212340DB9C00956DEF /* Api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		748BF1222340DB9C00956DEF /* Api.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		748BF1242340DBF200956DEF /* OtherServerRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherServerRequest.h; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 				748BF0CD2340D5A500956DEF /* AppDelegate.m */,
 				748BF0D22340D5A500956DEF /* ViewController.h */,
 				748BF0D32340D5A500956DEF /* ViewController.m */,
+				42D7BB4D23BED1D800BA68C7 /* TestViewController.h */,
+				42D7BB4E23BED1D800BA68C7 /* TestViewController.m */,
 				748BF0D52340D5A500956DEF /* Main.storyboard */,
 				748BF0D82340D5A600956DEF /* Assets.xcassets */,
 				748BF0DA2340D5A600956DEF /* LaunchScreen.storyboard */,
@@ -182,12 +190,14 @@
 		748BF11D2340DB2800956DEF /* ApiItems */ = {
 			isa = PBXGroup;
 			children = (
-				748BF11E2340DB4500956DEF /* DefaultServerRequest.h */,
-				748BF11F2340DB4500956DEF /* DefaultServerRequest.m */,
 				748BF1242340DBF200956DEF /* OtherServerRequest.h */,
 				748BF1252340DBF200956DEF /* OtherServerRequest.m */,
 				748BF1212340DB9C00956DEF /* Api.h */,
 				748BF1222340DB9C00956DEF /* Api.m */,
+				42D7BB4A23BECEAD00BA68C7 /* YCNetworkResponse+Custom.h */,
+				42D7BB4B23BECEAD00BA68C7 /* YCNetworkResponse+Custom.m */,
+				42D7BB5023BEE85900BA68C7 /* TestServerRequest.h */,
+				42D7BB5123BEE85900BA68C7 /* TestServerRequest.m */,
 			);
 			path = ApiItems;
 			sourceTree = "<group>";
@@ -366,13 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D7BB4C23BECEAD00BA68C7 /* YCNetworkResponse+Custom.m in Sources */,
 				748BF11C2340DAE400956DEF /* YCLogger.m in Sources */,
+				42D7BB5223BEE85900BA68C7 /* TestServerRequest.m in Sources */,
 				748BF0D42340D5A500956DEF /* ViewController.m in Sources */,
 				748BF0CE2340D5A500956DEF /* AppDelegate.m in Sources */,
 				748BF1232340DB9C00956DEF /* Api.m in Sources */,
 				748BF1262340DBF200956DEF /* OtherServerRequest.m in Sources */,
+				42D7BB4F23BED1D800BA68C7 /* TestViewController.m in Sources */,
 				748BF0DF2340D5A600956DEF /* main.m in Sources */,
-				748BF1202340DB4500956DEF /* DefaultServerRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

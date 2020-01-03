@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 请求参数字符串
 - (id)validRequestParameter;
 
+/// 请求头参数字符串
+- (NSDictionary *)validRequestHeaderParameter;
+
 @end
 
 
